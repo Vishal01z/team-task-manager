@@ -70,7 +70,7 @@ const Signup = () => {
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label className="block text-sm font-semibold text-slate-700 mb-2">Full Name</label>
-              <input type="text" value={form.name} onChange={e => setForm(p => ({ ...p, name: e.target.value }))} required placeholder="John Doe" className="w-full px-4 py-3.5 border-2 border-slate-200 rounded-2xl focus:border-indigo-500 transition-all bg-slate-50 font-medium" />
+              <input type="text" value={form.name} onChange={e => setForm(p => ({ ...p, name: e.target.value }))} required placeholder="Name" className="w-full px-4 py-3.5 border-2 border-slate-200 rounded-2xl focus:border-indigo-500 transition-all bg-slate-50 font-medium" />
             </div>
             <div>
               <label className="block text-sm font-semibold text-slate-700 mb-2">Email Address</label>
