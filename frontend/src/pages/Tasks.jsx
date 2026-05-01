@@ -28,7 +28,10 @@ const Tasks = () => {
   const userRole = myMembership?.role || 'member';
 
   useEffect(() => {
-    Promise.all([API.get(`/projects/${projectId}`), API.get(`/tasks/project/${projectId}`)])
+    Promise.all([
+      API.get(`/projects/${projectId}`),
+      API.get(`/tasks/project/${projectId}`)
+    ])
       .then(([p, t]) => { setProject(p.data); setTasks(t.data); })
       .catch(() => navigate('/projects'))
       .finally(() => setLoading(false));
